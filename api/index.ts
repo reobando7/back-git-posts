@@ -5,11 +5,12 @@ import Pool from 'pg';
 const app = express();
 app.use(cors())
 const pool = new Pool.Pool({
-  user: 'postgres',
-  host: 'localhost',
+  user: 'fl0user',
+  host: 'ep-broken-lake-55245360.us-east-2.aws.neon.fl0.io',
   database: 'blog',
-  password: 'postgres',
+  password: 'lGS9HAxCJUk0',
   port: 5432,
+  ssl:true
 })
 
 app.get('/v1/posts', (req : Request, res : Response) => {
